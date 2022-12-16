@@ -20,15 +20,24 @@
 
 </head>
 <body>
-    <h1>Primeiros passos no <strong>DOM</strong></h1>
-    <p>O que é DOM</p>
-    <p>Para que serve o DOM</p>
+    <h1 id="abobrinha">Primeiros passos no <strong>DOM</strong></h1>
+    <p >O que é DOM?</p>
+    <p id="pimentao">Para que serve o DOM?</p>
     <div>Teste com DOM</div>
+    <p class="query">O DOM é muito legal</p>
 
     <script>
-        window.document.body.style.background = 'blue'
-        var r = window.document.getElementsByTagName('h1')[0]
-        
+        var corpo = document.body
+        var chuchu = window.document.getElementsByTagName('div')[0]
+        window.document.write('Tá assim: ' + chuchu.innerText)
+      chuchu.style.color = 'green'
+      corpo.style.background = 'orange'
+        document.getElementById('abobrinha')
+        abobrinha.style.background = 'black'
+        abobrinha.innerText = 'Abobrinha'
+        document.getElementById('pimentao').innerText = 'Bala'
+        var batata = document.querySelector('p.query')
+        batata.style.background = 'red'
     </script>
     
 </body>
