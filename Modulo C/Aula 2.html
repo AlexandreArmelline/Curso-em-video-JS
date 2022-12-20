@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+
+    <style>
+        div#area{
+            font: normal 30pt arial;
+            background: rgb(143, 38, 120);
+            color: aquamarine;
+            width: 300px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+
+        }
+
+        div#area2{
+            font: normal 30pt arial;
+            background: rgb(143, 38, 120);
+            color: aquamarine;
+            width: 300px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+
+<br><br><br>
+  
+    <div id="area2">
+        Interaja...
+    </div>
+
+
+    <script>
+        var a = document.getElementById('area')
+       
+
+        function clicar() {
+            a.innerText = 'Clicou!!!'
+            a.style.background = 'white'
+            a.style.color = 'black'
+            
+        }
+
+        function entrar(){
+            a.innerText = 'Entrou!!!'
+            a.style.background = 'red'
+            
+        }
+        
+        function sair(){
+            a.innerText = 'Saiu!!!'
+            a.style.background = "purple"
+            
+        }
+
+        var a2 = document.getElementById('area2')
+        a2.addEventListener('click', clicar2)
+        a2.addEventListener('mouseenter', entrar2)
+        a2.addEventListener('mouseout', sair2)
+
+        function clicar2() {
+            a2.innerText = 'Clicou'
+            a2.style.background = 'white'
+            a2.style.color = 'black'
+            
+        }
+
+        function entrar2(){
+            a2.innerText = 'Entrou'
+            a2.style.background = 'green'
+        }
+
+        function sair2(){
+            a2.innerText = 'Saiu'
+            a2.style.background = 'orange'
+        }
+
+    </script>
+</body>
+</html>
