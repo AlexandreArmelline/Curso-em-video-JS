@@ -5,23 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Valores</title>
+
+    <style>
+        body {
+            font: normal 18pt arial;
+            color: rgb(81, 165, 42);
+            }
+
+        input {
+            font: normal 18pt arial;
+            width: 100px;
+            background: greenyellow;
+            
+        } 
+        
+        input.cx{
+            background: coral;
+        }
+
+        div{
+            margin-top: 30px;
+            margin-left: 30px;
+            color: blueviolet;
+            background: orange;
+            width: 400px;
+        }
+
+    </style>
 </head>
 <body>
     <h1>Somando Valores</h1>
 
-    <input type="number" name="cx1" id="cx1"> +
-    <input type="number" name="cx2" id="cx2">
+    <input type="number" name="cx1" id="cx1" class="cx"> +
+    <input type="number" name="cx2" id="cx2" class="cx">
     <input type="button" value="Somar" onclick="somar()">
-
+<div id="res"></div>
 
     <script>
 
         function somar() {
             var c1 = document.getElementById('cx1')
             var c2 = document.querySelector('input#cx2')
+            var res = document.querySelector('div#res')
             var v1 = Number(c1.value)
             var v2 = Number(c2.value)
-            
+            var s = v1 + v2
+            res.innerHTML = `A soma entre ${v1} e ${v2} é igual a ${s}`
         }
 
     </script>
