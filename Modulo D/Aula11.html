@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+
+    <style>
+        div#lim {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <div id="lim">Qual o limite da via: <input type="number" name="" id="limite"></div>
+    Velocidade: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Ok" onclick="calculo()">
+    <div id="res"></div>
+
+<script>
+    function calculo() {
+        var txtv = window.document.querySelector('input#txtvel')
+        var res = window.document.querySelector('div#res')
+        var vel = Number(txtv.value)
+        var limite = document.querySelector('input#limite')
+        var limiteNum = Number(limite.value)
+        res.innerHTML = `<p>Velocidade <strong>${vel}Km/h</strong></p>`
+        if (vel > limiteNum) {
+            res.innerHTML += `<p><strong>Multado</strong> por excesso de velocidade</p>`
+
+        }
+
+    res.innerHTML += `Use o cinto de segurança!`    
+
+    }
+</script>
+    
+</body>
+</html>
