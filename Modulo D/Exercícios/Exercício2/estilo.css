@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    color: rgb(255, 255, 255);
+    color: white;
     text-align: center;
 
 }
@@ -14,9 +14,9 @@ section {
     background: white;
     border-radius: 10px;
     padding: 15px;
-    width: 400px;
+    width: 500px;
     margin: auto;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
 }
 
 footer {
@@ -24,19 +24,4 @@ footer {
     text-align: center;
     font-style: italic;
 
-}
-
-#imagem {
-    border-radius: 130px;
-       
-}
-
-#msg  {
-    font-size: 30px;
-
-}
-
-div {
-    text-align: center;
-    padding: 5px;
 }
