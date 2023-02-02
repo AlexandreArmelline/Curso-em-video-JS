@@ -27,7 +27,7 @@ function verificar() {
             // idoso
             img.setAttribute('src', 'Idoso.jpg')
            }
-       } else if (fsex[1].checked) {
+       } else {
         genero = 'Mulher'
         if (idade >= 0 && idade < 15) {
             //criança
