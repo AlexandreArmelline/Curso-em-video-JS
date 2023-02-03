@@ -49,6 +49,7 @@ function verificar() {
        res2.appendChild(img)
        res2.style.textAlign = 'center' 
        
+       
     }
    
 }

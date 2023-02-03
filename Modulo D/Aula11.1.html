@@ -14,17 +14,23 @@ Em qual país você nasceu? <input type="text" name="nacionalidade" id="nacional
 <input type="button" value="Ok" onclick="verificar()">
 
 
-
-<div id="resposta">Brasileiro</div>
-
+<div id="resposta"></div>
+<div id="teste">oi</div>
 
 <script>
 function verificar()    {
-var nac = document.querySelector('input#nacionalidade')
+var nac = document.getElementById('nacionalidade')
 var resposta = document.querySelector('div#resposta')
-    if (nac != "Brasil" ) {
-        resposta.innerHTML = '<p><strong>Você é Estrangeiro</strong></p>'
+var teste = document.querySelector('div#teste')
+    if (nac == 'Brasil' ) {
+        resposta.innerHTML = '<p><strong>Você é Brasileiro</strong></p>'
+} else {
+    resposta.innerHTML = '<p><strong>Você é Estrangeiro</strong></p>'
 }
+
+teste.innerHTML = nac
+
+
 
 
 
