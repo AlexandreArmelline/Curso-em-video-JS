@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes JS Arrays</title>
+    <style>
+        h2{
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 id="b">Treinando uso de Array</h1> 
+    <hr>
+    <h2>Exibindo os valores e suas posições da arrya "valores"</h2>
+    <p id="a"></p>
+    <hr>
+    <h2>Exibindo os valores e suas posições da arrya "valores2" organizados através do comando .sort()</h2>
+    <p id="c"></p>
+    <hr>
+    <h2>Exibindo o indice de do valor 4 através do comando ".indexOf()"</h2>
+    <p id="d"></p>
+
+
+      <script>
+        
+        var valores = [4,6,2,8,1]
+        console.log(valores)
+        
+
+        var a = document.querySelector('#a')
+        
+        for(var posicao=0;posicao < valores.length;posicao++){
+            a.innerHTML += `A posiçao ${posicao} tem o valor ${valores[posicao]} <br> ` 
+        }
+
+        var valores2 = [4,6,2,8,5]
+        console.log(valores2)
+        valores2.sort()
+
+        var c = document.querySelector('#c')
+        
+       for(var pos in valores2)
+           c.innerHTML += `A posiçao ${pos} tem o valor ${valores2[pos]}<br>`
+
+        var valores3 = [5,2,4,8]
+        var d = document.querySelector('#d')
+        var posic = valores3.indexOf(4)
+
+        d.innerHTML = `O valor esta no indice ${posic}`
+         
+    </script>
+    
+</body>
+</html>
