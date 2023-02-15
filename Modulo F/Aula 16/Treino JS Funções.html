@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testes JS Arrays</title>
+    <title>Testes JS Funções</title>
     <style>
         h2{
             font-size: 20px;
@@ -16,11 +16,23 @@
     <h1 id="b">Treinando uso de Funções</h1> 
     <hr>
     <h2>Passando parametros numericos para uma função e disendo se este é par ou impar.</h2>
+    
     <p id="a"></p>
+    
     <hr>
-    <h2>Exibindo os valores e suas posições da arrya "valores2" organizados através do comando .sort()</h2>
+
+    <h2>Igual ao exercicío anterior porem com input do usuario </h2>
+    <input type="number" name="" id="numero" placeholder="Digite um numero">
+    <input type="button" value="OK" onclick="calcular()">
+    <p id="aa"></p>
+    
+    <hr>
+    <h2>Somando valores em uma função atravéz da passagem de parametros e pré defineindo os parametros.</h2>
+    
     <p id="c"></p>
     <hr>
+
+
     <h2>Exibindo o indice de do valor 4 através do comando ".indexOf()"</h2>
     <p id="d"></p>
 
@@ -36,17 +48,34 @@
             return 'Impar!'
         }
     }
-        a.innerHTML= (parim(60))
+        a.innerHTML= (parim(78))
       
-        
-        var valores2 = [4,6,2,8,5]
-        console.log(valores2)
-        valores2.sort()
+        /*Igual ao exercicío anterior porem com input do usuario*/
+        var aa = document.querySelector('#aa')
+       
+        function calcular(){
+            var numero = document.querySelector('#numero')
+            var nu = Number(numero.value)
+            aa.innerHTML= (parim(nu))
+    }
+        function parim(n){
+        if (n%2 == 0){
+            return 'Par!'
+        } else {
+            return 'Impar!'
+        }
+        }
+    
+       /*Somando valores em uma função atravéz da passagem de parametros e pré defineindo os parametros.*/ 
 
         var c = document.querySelector('#c')
-        
-       for(var pos in valores2)
-           c.innerHTML += `A posiçao ${pos} tem o valor ${valores2[pos]}<br>`
+            function soma(n1=0,n2=0,n3=0){
+                return `A soma é ${n1+n2+n3}`
+            }
+           c.innerHTML = soma(9,7)
+
+
+
 
         var valores3 = [5,2,4,8]
         var d = document.querySelector('#d')
