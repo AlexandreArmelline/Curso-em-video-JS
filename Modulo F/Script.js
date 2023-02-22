@@ -1,25 +1,42 @@
-
-
-function add(){
-
+    var numf = document.querySelector('input#num')
+   
+    var flist = document.querySelector('select#flist')
+    var res2 = document.querySelector('div#res2')
     var valores = []
-    var res = document.querySelector('#res')
-    var numf = document.querySelector('#num')
-    var num = Number(numf.value)
-    if (num < 0 || num > 100) {
-        window.alert('Por favor digite um valor entre 0 e 100')
-    } else {
-        valores.push(num)
-        for(var pos in valores)
-        res.innerHTML += `${valores[pos]} <br>`
-      
-    }  
-}
 
-function final(){
-    
-    var res2 = document.querySelector('#res2')
+    function validarNum(n){
+        if (Number(n) >= 0 && Number(n) <= 100){
+            return true
+        } else {
+            return false
+        }
+    }
+
+    function inList(n, v){
+        if (v.indexOf(Number(n)) != -1){
+            return true
+        } else {
+            return false
+        }
+
+    }
 
 
-    res2.innerHTML = 'ooooo'
-}
+    function add(){
+        var num = Number(numf.value)
+        if (validarNum(num) && !inList(num, valores)){
+            valores.push(num)
+            var item = document.createElement('option')
+            item.text = num
+            flist.appendChild(item)
+
+        } else {
+            window.alert('Valor invalido ou ja encontrado na lista')
+        }
+
+        numf.value = ''
+        numf.focus()
+       
+    }
+
+   
